@@ -1,0 +1,239 @@
+:root {
+  --color-principal: #026fdb;
+  --color-secundario: #003366;
+  --color-acento: #0074d9;
+  --color-fondo: #f4f4f4;
+  --color-blanco: #fff;
+  --color-gris: #e0e0e0;
+  --color-gris-claro: #fafafa;
+  --color-borde: #ccc;
+  --color-hover: #39a8f3;
+  --color-breadcrumb: #ecf0f1;
+  --color-breadcrumb-hover: #d6eaf8;
+  --color-boton: #27ae60;
+  --color-boton-hover: #219150;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--color-fondo);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+header, footer {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1.5em 0;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(2, 111, 219, 0.08);
+}
+
+h1 {
+  margin-bottom: 0.5em;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: var(--color-gris);
+  border-bottom: 2px solid var(--color-principal);
+}
+
+nav ul li {
+  margin: 0 1.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-secundario);
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.7em 1.2em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: var(--color-hover);
+  color: var(--color-blanco);
+}
+
+main {
+  max-width: 800px;
+  margin: 2.5em auto;
+  background: var(--color-blanco);
+  padding: 2.5em 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(2, 111, 219, 0.08);
+}
+
+section h2 {
+  color: var(--color-principal);
+  margin-bottom: 1em;
+  font-size: 1.6em;
+}
+
+footer {
+  margin-top: 2.5em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border-top: 2px solid var(--color-principal);
+  box-shadow: 0 -2px 8px rgba(2, 111, 219, 0.05);
+}
+
+/* Breadcrumb */
+.breadcrumb ul {
+  list-style: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background: var(--color-breadcrumb);
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb a {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.breadcrumb a:hover {
+  background: var(--color-breadcrumb-hover);
+}
+
+.breadcrumb a.active {
+  background-color: var(--color-hover);
+  color: var(--color-blanco);
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5em;
+  background: var(--color-blanco);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(2, 111, 219, 0.05);
+}
+
+th, td {
+  border: 1px solid var(--color-borde);
+  padding: 14px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-gris);
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-gris-claro);
+}
+
+/* Formularios y botones */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 2em auto;
+  background: var(--color-blanco);
+  padding: 2em 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(2, 111, 219, 0.07);
+}
+
+.campo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="number"],
+form select {
+  padding: 10px;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  width: 100%;
+  max-width: 220px;
+  margin-right: 10px;
+  font-size: 1em;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+form select:focus {
+  border: 1.5px solid var(--color-principal);
+  outline: none;
+}
+
+form button,
+button {
+  background-color: var(--color-boton);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0.5em 0;
+}
+
+form button:hover,
+button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+.eliminar {
+  background: transparent;
+  color: #e74c3c;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.eliminar:hover {
+  color: #c0392b;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 2em;
+  color: var(--color-principal);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--color-principal);
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.volver:hover {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+}
